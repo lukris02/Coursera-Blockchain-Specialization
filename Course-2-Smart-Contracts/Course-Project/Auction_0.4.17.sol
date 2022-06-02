@@ -39,7 +39,7 @@ contract Auction {
         
         //Part 1 Task 2. Initialize two items with at index 1 and 2. 
         // ** Start code here. 2 lines approximately. **/
-        items[1] =  Item({itemId:1,itemTokens:emptyArray});
+        items[1] = Item({itemId:1,itemTokens:emptyArray});
         items[2] = Item({itemId:2,itemTokens:emptyArray});
         //** End code here**/
     }
@@ -104,7 +104,7 @@ contract Auction {
     //Hint : Use require to validate if "msg.sender" is equal to the "beneficiary".
     modifier onlyOwner {
         // ** Start code here. 2 lines approximately. **
-        
+        require(beneficiary == msg.sender);
         _;
         //** End code here. **
     }
